@@ -14,9 +14,9 @@
                     <li><a href="https://esmail.github.io/cs109a-f18-group16/index.html" rel="bookmark">Intro</a></li>
                     <li><a href="https://esmail.github.io/cs109a-f18-group16/eda.html" rel="bookmark">EDA</a></li>
                     <li><a href="https://esmail.github.io/cs109a-f18-group16/models.html" rel="bookmark">Models</a></li>
-                    <li><a href="https://esmail.github.io/cs109a-f18-group16/literature.html" rel="bookmark">Literature</a></li>
-                    <li><a href="https://esmail.github.io/cs109a-f18-group16/future_steps.html" rel="bookmark">Future Steps</a></li>
                     <li><a href="https://esmail.github.io/cs109a-f18-group16/conclusion.html" rel="bookmark">Conclusion</a></li>
+                    <li><a href="https://esmail.github.io/cs109a-f18-group16/future_steps.html" rel="bookmark">Future Steps</a></li>
+                    <li><a href="https://esmail.github.io/cs109a-f18-group16/references.html" rel="bookmark">References</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -1014,52 +1014,25 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Milestone-3:-Alzheimer's-Group-16">Milestone 3: Alzheimer's Group 16<a class="anchor-link" href="#Milestone-3:-Alzheimer's-Group-16">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Daniel-Graziano,-Daniel-Molina-Hurtado,-Esmail-Fadae,-Paxton-Maeder-York">Daniel Graziano, Daniel Molina Hurtado, Esmail Fadae, Paxton Maeder-York<a class="anchor-link" href="#Daniel-Graziano,-Daniel-Molina-Hurtado,-Esmail-Fadae,-Paxton-Maeder-York">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Our strategy is to look at all the supporting datasets, pull out columns that are relevant and join based on patient ID (RID), only saving test rows that occured post diagnosis.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In this project, we are going to work with the vast amount of information provided by the Alzheimer’s Disease Neuroimaging Initiative (ADNI). This data has been colected by researchers at more than 60 sites in the US and Canada working with thousands of participants between the ages of 55 and 90. Participants can start the study with normal cognitive function, mild cognitive impairment (MCI) or Alzheimer's Desease (AD). The project is divided in several phases in time: ADNI1 (2004-2009), ADNIGO(2009-2001), ADNI2(2011-2016) and ADNI3(2016-2021). The study collects different types of data such as demographics, family history, genetics, neuropsycologichal tests, imaging or biomarkers.</p>
-<p>Our initial goal in this project will be to determine the most effective biomarkers and neuropsychological tests in order to predict Alzheimer's disease. If time permits we will also focus on summary imaging data but that is out of scope for now.</p>
-<p>We will start by exploring and putting together data from different datasets in different areas, cleaning it and preparing it for modeling and making predictions in further stages of the project.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Libraries-and-Imports">Libraries and Imports<a class="anchor-link" href="#Libraries-and-Imports">&#182;</a></h4>
+<h1><img style="float: left; padding-right: 10px; width: 45px" src="https://raw.githubusercontent.com/Harvard-IACS/2018-CS109A/master/content/styles/iacs.png"> CS109/209A Introduction to Data Science Final Project</h1>
+<h2 id="Alzheimer's-Disease-Neuroimaging-Initiative">Alzheimer's Disease Neuroimaging Initiative<a class="anchor-link" href="#Alzheimer's-Disease-Neuroimaging-Initiative">&#182;</a></h2><h4 id="Group-16:-Daniel-Graziano,-Daniel-Molina-Hurtado,-Esmail-Fadae,-Paxton-Maeder-York">Group 16: Daniel Graziano, Daniel Molina-Hurtado, Esmail Fadae, Paxton Maeder-York<a class="anchor-link" href="#Group-16:-Daniel-Graziano,-Daniel-Molina-Hurtado,-Esmail-Fadae,-Paxton-Maeder-York">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[0]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Basic Imports</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">####################</span>
+<span class="c1">#   IMPORTS CELL   #</span>
+<span class="c1">####################</span>
+
+<span class="c1"># ignore warnings for aesthetic reasons</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1">#Basic Imports</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -1071,12 +1044,15 @@ h6:hover .anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">confusion_matrix</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing.imputation</span> <span class="k">import</span> <span class="n">Imputer</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
 
 <span class="c1">#Model Imports</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">svm</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">from</span> <span class="nn">statsmodels.api</span> <span class="k">import</span> <span class="n">OLS</span>
 <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
@@ -1086,22 +1062,19 @@ h6:hover .anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.discriminant_analysis</span> <span class="k">import</span> <span class="n">QuadraticDiscriminantAnalysis</span>
 <span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>  
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">export_graphviz</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">AdaBoostClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">LinearSVC</span>
 
 <span class="c1">#Plotting Imports</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.width&#39;</span><span class="p">,</span> <span class="mi">1500</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-
-<span class="c1">#Other Imports</span>
-<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="k">import</span> <span class="n">gamma</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
 
 <span class="c1">#Keras Imports</span>
 <span class="kn">import</span> <span class="nn">keras</span> 
@@ -1111,11 +1084,77 @@ h6:hover .anchor-link {
 <span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">UpSampling2D</span><span class="p">,</span> <span class="n">GlobalAveragePooling2D</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Model</span>
 <span class="kn">from</span> <span class="nn">keras.optimizers</span> <span class="k">import</span> <span class="n">Adam</span><span class="p">,</span> <span class="n">SGD</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">keras.utils</span> <span class="k">import</span> <span class="n">np_utils</span>
+
+<span class="c1">#Other Imports</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="k">import</span> <span class="n">gamma</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTMLfrom</span> <span class="n">typing</span> <span class="kn">import</span> <span class="nn">List</span><span class="o">,</span> <span class="nn">Tuple</span><span class="o">,</span> <span class="nn">Dict</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">Pipeline</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+
+<span class="c1">#install and import extra packages not included in base environment</span>
+<span class="o">!</span>pip install numba<span class="p">;</span>
+<span class="o">!</span>pip install umap-learn<span class="p">;</span>
+<span class="o">!</span>pip install graphviz<span class="p">;</span>
+
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Linux&#39;</span><span class="p">:</span>
+  <span class="o">!</span>apt-get install graphviz<span class="p">;</span>
+<span class="k">elif</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Darwin&#39;</span><span class="p">:</span>
+  <span class="o">!</span>brew install graphviz<span class="p">;</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Please install graphviz binaries to generate decision tree graphs properly&#39;</span><span class="p">,</span><span class="s1">&#39;Warning&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">graphviz</span> 
+<span class="kn">from</span> <span class="nn">umap</span> <span class="k">import</span> <span class="n">UMAP</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Using TensorFlow backend.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: numba in /usr/local/lib/python3.6/dist-packages (0.40.1)
+Requirement already satisfied: llvmlite&gt;=0.25.0dev0 in /usr/local/lib/python3.6/dist-packages (from numba) (0.26.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.6/dist-packages (from numba) (1.14.6)
+Requirement already satisfied: umap-learn in /usr/local/lib/python3.6/dist-packages (0.3.7)
+Requirement already satisfied: numpy&gt;=1.13 in /usr/local/lib/python3.6/dist-packages (from umap-learn) (1.14.6)
+Requirement already satisfied: scikit-learn&gt;=0.16 in /usr/local/lib/python3.6/dist-packages (from umap-learn) (0.20.1)
+Requirement already satisfied: scipy&gt;=0.19 in /usr/local/lib/python3.6/dist-packages (from umap-learn) (1.1.0)
+Requirement already satisfied: numba&gt;=0.37 in /usr/local/lib/python3.6/dist-packages (from umap-learn) (0.40.1)
+Requirement already satisfied: llvmlite&gt;=0.25.0dev0 in /usr/local/lib/python3.6/dist-packages (from numba&gt;=0.37-&gt;umap-learn) (0.26.0)
+Requirement already satisfied: graphviz in /usr/local/lib/python3.6/dist-packages (0.10.1)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+graphviz is already the newest version (2.40.1-2).
+0 upgraded, 0 newly installed, 0 to remove and 8 not upgraded.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1125,7 +1164,7 @@ h6:hover .anchor-link {
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import some data from our shared google drive folder</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import data from our shared google drive folder</span>
 
 <span class="c1">#file_id comes from the end of the shareable link of the file from google drive</span>
 <span class="c1">#it is a set of alphanumeric characters after the &#39;/d/ tag in the share URL</span>
@@ -1135,7 +1174,7 @@ h6:hover .anchor-link {
 
 <span class="k">def</span> <span class="nf">read_gdrive_data</span><span class="p">(</span><span class="n">file_id</span><span class="p">):</span>
   <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://drive.google.com/uc?export=download&amp;id=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">file_id</span><span class="p">)</span>
-  <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">),</span><span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;-4&#39;</span><span class="p">)</span>
+  <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
   <span class="k">return</span> <span class="n">df</span>
 </pre></div>
 
@@ -1143,6 +1182,110 @@ h6:hover .anchor-link {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h3><p>Alzheimer's Disease (AD) is the 6th leading cause of death in the United States and the <a href="https://www.nia.nih.gov/news/number-alzheimers-deaths-found-be-underreported">3rd cause among people 65 and older</a>. It is an irreversible neurodegenerative disease that progresively damages an individual's cognitive functioning. It usually starts with memory loss and a worsening of thinking capabilities, and it develops to problems with language, orientation and loss of body functions, ultimately leading to death. The life expectancy following the diagnosis of the disease ranges from 3 to 8 years depending on the individual. The disease is significatnly more common in adults in an advanced age, usually over 65 years old.</p>
+<p>Currently there is no cure for the disease and the causes are yet not completely understood. Given the relevance of Alzheimer there is a big global effort put in research of diagnosis and treatment. One of the biggest projects is the Alzheimer's Disease Neuroimaging Initiative (ADNI) whose data will be used in this project.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="ADNI">ADNI<a class="anchor-link" href="#ADNI">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Alzheimer’s Disease Neuroimaging Initiative is a joint research initiative whose goal is to improve the understanding, diagnosis and treatments for Alzheimer's Disease. As part of this study researchers at more than 60 sites in the United States and Canada collected and are colecting data from over a thousand participants. The types of data collected range from demographics and family history to genetics, neuropsycologichal tests, imaging or biomarkers. The project is divided in several phases in time: ADNI1 (2004-2009), ADNIGO (2009-2001), ADNI2 (2011-2016) and ADNI3 (2016-2021).</p>
+<table>
+  <tr></tr>
+  <tr>
+    <td>
+      <img src="http://drive.google.com/uc?export=view&id=1d3P68jeOS29j2MtfXFB1mGyUh-PZ6aj8">
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Objectives">Objectives<a class="anchor-link" href="#Objectives">&#182;</a></h3><p>Our main goals for this projects are:</p>
+<p>1) To build a model able to predict if Alzheimer's disease will be developed in an individual using the data provided by ADNI. This is very important since early diagnosis of Alzheimer can lead to a slower progression of the disease by accessing different treatments <a href="https://www.alz.org/alzheimers-dementia/diagnosis/why-get-checked">[source]</a>.</p>
+<p>2) To identify the most relevant information or tests that allow us predicting a diagnosis. This can help reducing the cost and effort spent in the diagnosis phase by reducing the number of tests to the most essential.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exploratory-Data-Analysis-(EDA)">Exploratory Data Analysis (EDA)<a class="anchor-link" href="#Exploratory-Data-Analysis-(EDA)">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The ADNI project collected and is collecting an enormous amount of data that is provided in many scattered csv files and with quite cryptic labels and codes. This together with the lack of knowledge in the field can be overwhelming and challenging at first. In this section we are going to explore different types of data and determine their relevance.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-Categories">Data Categories<a class="anchor-link" href="#Data-Categories">&#182;</a></h3><p>In order to start having a big picture of the data, we are going to describe roughly the different categories in which we will focus. After doing some research online and taking a look to the data, we have decided to limit our scope to the following categories:</p>
+<h4 id="Demographics-and-Medical-History">Demographics and Medical History<a class="anchor-link" href="#Demographics-and-Medical-History">&#182;</a></h4><p>The study collected some basic information about the patients including age, gender, race or civil status. It also collected some family history information like the fact that certain relatives developed different kinds of illnesses including Alzheimer itself. This category of information is the easiest to understand since it doesn't require any particular background.</p>
+<h4 id="Neuropsychological-Tests">Neuropsychological Tests<a class="anchor-link" href="#Neuropsychological-Tests">&#182;</a></h4><p>One of the most valuable and broadly used information provided as part of the study are neuropsychological tests. This often consists on a set of tasks the patient has to perform and the goal is to evaluate the cognitive function of the brain. They are often focused on a specific part or pathway of this organ and they produce a particular score that is then evaluated in a predefined scale. Some of the most widely used neuropsychological tests include CDR (Clinical Dementia Rating), FAQ (Functional Activities Questionnaire) or MMSE (Mini–Mental State Examination).</p>
+<h4 id="Biomarkers">Biomarkers<a class="anchor-link" href="#Biomarkers">&#182;</a></h4><p>A biomarker is some biological indicator that is linked to a particular disease, in this case Alzheimer. The study perform many biological tests to the patients including different blood or urine tests. However one of the most used substances to obtain biomarkers from is the Cerebrospinal Fluid (CSF) which is found in the brain and the spinal cord. Some CSF biomarkers are different forms of the proteins Amyloid-$\beta$ like A$\beta$42 or Tau like p-tau.</p>
+<table>
+  <tr></tr>
+  <tr>
+    <td>
+      <img src="http://drive.google.com/uc?export=view&id=15Kut9jOo0LrE76C8sFlRFTijVGGKPlXS">
+    </td>
+  </tr>
+</table><h4 id="Brain-Imaging-Data">Brain Imaging Data<a class="anchor-link" href="#Brain-Imaging-Data">&#182;</a></h4><p>Along the different phases of the study 2 main technologies have been used to capture images of the brain: Magnetic Resonance Imaging (MRI) and Positron Emission Tomography (PET). During the development of Alzheimer Disease many changes happen in the brain including variations in shape and volume, and deposits of toxic proteins like the aforementioned amyloid plaques and tau tangles in certain areas of the brain.</p>
+<table>
+  <tr></tr>
+  <tr>
+    <td>
+      <img src="http://drive.google.com/uc?export=view&id=1WaFRd-c0_c4QRl_w3Y3RchGcrRNusD1y">
+    </td>
+    <td>
+      <img src="http://drive.google.com/uc?export=view&id=12wH512111-ZXZ8mesI_SRsAaACfVCqBI">
+    </td> 
+     <tr></tr>
+      <tr>
+        <td style="text-align:center"><i>Healthy (left) vs AD (right) brain</i></td>
+        <td style="text-align:center"><i>MRI Image of the brain</i></td>
+      </tr>
+</table>
+</div>
+</div>
 </div>
  
 
