@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Daniel Graziano, Daniel Molina Hurtado, Esmail Fadae, Paxton Maeder-York'
-SITENAME = "Alzheimer's Disease Diagnosis Prediction (CS109A Fall 2018 - Group 16)"
+SITENAME = "Alzheimer's Disease Diagnosis Prediction"
 SITEURL = ''
 
 PATH = 'content'
@@ -37,10 +37,28 @@ DEFAULT_PAGINATION = False
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'ipynb.liquid']
 
 # if you create jupyter files in the content dir, snapshots are saved with the same
 # metadata. These need to be ignored. 
 IGNORE_FILES = [".ipynb_checkpoints"]
 
+# Use the `docs` directory for GitHub pages
 OUTPUT_PATH = 'docs/'
+
+# Allow an article to be used for `index.html`
+INDEX_SAVE_AS = 'blog.html'
+
+# Flat directory structure
+PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}.html'
+
+# No feed clutter
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+# Use customized theme
+THEME = './themes/notmyidea'
