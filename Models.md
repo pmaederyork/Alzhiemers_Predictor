@@ -3,7 +3,6 @@ nav_include: 3
 title: Models
 ---
 
-## Models
 
 In this section we are going to apply different models to our data in search of the best classifier. We are facing a 3 class classification problem with the diagnosis of Alzheimer being the response variable and which can be Normal (NL), Mild Cognitive Impairment (MCI) or Dementia/Alzheimer's Disease (AD). But first we need a systematic approach to apply the different models so we are going to group some functions together:
 
