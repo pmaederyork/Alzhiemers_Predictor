@@ -1,3 +1,7 @@
+---
+nav_include: 4
+title: Coonclusions
+---
 
 ### Results
 In this section we are going to summarize and compare the models and strategies used above. Let’ start by taking a look to the accuracy results:
