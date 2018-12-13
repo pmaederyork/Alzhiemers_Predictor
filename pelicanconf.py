@@ -62,3 +62,4 @@ AUTHOR_FEED_RSS = None
 
 # Use customized theme
 THEME = './themes/notmyidea'
+CSS_FILE = "override.css"

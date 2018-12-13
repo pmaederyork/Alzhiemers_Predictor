@@ -1,0 +1,6 @@
+@import url("main.css");
+
+.post-info {display: none;}
+#extras {display:none;}
+.input_prompt, .output_prompt {display: none}
+.output_png img {max-width: 100%}
