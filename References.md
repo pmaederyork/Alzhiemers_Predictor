@@ -3,8 +3,6 @@ nav_include: 5
 title: References
 ---
 
-## References
-
 UMAP:  McInnes, Leland, and John Healy. "Umap: Uniform manifold approximation and projection for dimension reduction." arXiv preprint arXiv:1802.03426 (2018). https://arxiv.org/abs/1802.03426
 
 Harvard-IACS. "2018-CS109A" (CS-109A Course Materials). https://github.com/Harvard-IACS/2018-CS109A (2018)
