@@ -1072,7 +1072,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this section we are going to investigate several datasets and merge the ones we consider more relevant into a single dataset. This task is quite complicated for 3 reasons: there is a lot of data, the labels are not very descriptive, and background information is needed to understand many of the tests. Luckily there are a few useful resources provided in the ADNI website like a data dictionary, and some documents that helps us on this task.</p>
+<p>In this section we are going to investigate several datasets and merge the ones we consider more relevant into a single dataset. This task is quite complicated for 3 reasons: there is a lot of data, the labels are not very descriptive, and background information is needed to understand many of the tests. Luckily there are a few useful resources provided in the ADNI website like a data dictionary, and some documents to help us on this task.</p>
 
 </div>
 </div>
@@ -1196,14 +1196,14 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Diagnosis">Diagnosis<a class="anchor-link" href="#Diagnosis">&#182;</a></h4><p>We will start from the diagnosis dataset, in which we have the diagnosis given to the patients in different visits and phases. The challenge with this dataframe is that the way diagnosis was presented is varies between phases of the study. The first thing we need to do is create only one diagnosis variable that we can use as our response variable.</p>
+<h4 id="Diagnosis">Diagnosis<a class="anchor-link" href="#Diagnosis">&#182;</a></h4><p>We will start from the diagnosis dataset, in which we have the diagnosis given to the patients in different visits and phases. The challenge with this dataframe is that the way diagnosis was presented varies between phases of the study. The first thing we need to do is create only one diagnosis variable that we can use as our response variable.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Diagnosis</span>
@@ -1222,7 +1222,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -1278,7 +1278,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">adni_merge_df</span> <span class="o">=</span> <span class="n">process_diagnosis</span><span class="p">(</span><span class="n">dx_df</span><span class="p">)</span>
@@ -1376,7 +1376,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -1402,7 +1402,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#registry_df = pd.read_csv(&#39;data/REGISTRY.csv&#39;)</span>
@@ -1420,7 +1420,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -1480,7 +1480,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">registry_df</span> <span class="o">=</span> <span class="n">process_registry</span><span class="p">(</span><span class="n">registry_df</span><span class="p">)</span>
@@ -1509,7 +1509,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -1617,7 +1617,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">adni_merge_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">adni_merge_df</span><span class="p">,</span> 
@@ -1748,7 +1748,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -1774,7 +1774,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#demog_df = pd.read_csv(&#39;data/PTDEMOG.csv&#39;)</span>
@@ -1792,7 +1792,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -1834,7 +1834,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">demog_df</span> <span class="o">=</span> <span class="n">process_demographics</span><span class="p">(</span><span class="n">demog_df</span><span class="p">)</span>
@@ -2094,7 +2094,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -2111,7 +2111,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">adni_merge_df</span> <span class="o">=</span> <span class="n">merge_dfs</span><span class="p">(</span><span class="n">adni_merge_df</span><span class="p">,</span> 
@@ -2301,7 +2301,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -2327,7 +2327,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#med_hist_df = pd.read_csv(&#39;data/MEDHIST.csv&#39;)</span>
@@ -2345,7 +2345,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -2362,7 +2362,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># adapt VISCODE to prevent duplication of rows</span>
@@ -2665,7 +2665,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -2682,7 +2682,7 @@ h6:hover .anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#MHPSYCH, MH2NEURL: psychiatric history or neurological history</span>
@@ -2896,7 +2896,7 @@ h6:hover .anchor-link {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -2957,7 +2957,7 @@ The score in independent areas are combined to obtain a composite score ranging 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#cdr_df = pd.read_csv(&#39;data/&#39; + &#39;CDR.csv&#39;)</span>
@@ -2975,7 +2975,7 @@ The score in independent areas are combined to obtain a composite score ranging 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -2992,7 +2992,7 @@ The score in independent areas are combined to obtain a composite score ranging 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># preprocessing</span>
@@ -3211,7 +3211,7 @@ The score in independent areas are combined to obtain a composite score ranging 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -3248,7 +3248,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#faq_df = pd.read_csv(&#39;data/&#39; + &#39;FAQ.csv&#39;)</span>
@@ -3266,7 +3266,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -3283,7 +3283,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># preprocessing</span>
@@ -3508,7 +3508,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -3543,7 +3543,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#mmse_df = pd.read_csv(&#39;data/&#39; + &#39;MMSE.csv&#39;)</span>
@@ -3561,7 +3561,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[23]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -3578,7 +3578,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># preprocessing</span>
@@ -3809,7 +3809,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -3844,7 +3844,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#biomarkers_df = pd.read_csv(&#39;data/&#39; + &#39;UPENNBIOMK_MASTER.csv&#39;)</span>
@@ -3862,7 +3862,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -3879,7 +3879,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pre-processing</span>
@@ -4133,7 +4133,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -4164,7 +4164,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#apoe4_df = pd.read_csv(&#39;data/APOERES.csv&#39;)</span>
@@ -4182,7 +4182,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -4199,7 +4199,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pre-processing</span>
@@ -4461,7 +4461,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -4480,14 +4480,14 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see, the effort required to build a merged data set with all the custom predictors of interests is extremely big. Every new dataset we want to merge require dealing with cryptic labels and loads of missing data, knowledge of the information we are merging for interpretation and in all cases some carefull pre-processing and merging. Given the diversity, there's no easy way to create generic functions or to generalize the processing a lot. On top of that we have to monitor after every merge for potential additional rows. Given the big effort required in obtaining a merged dataset, and that the scope of this project is not to perfom and instrumentalize such action, we have decided to used an already merged dataset provided by researchers from the University of California, San Diego. However we consider the knowledge we have obtained during this process very valuable for further steps.</p>
+<p>As we can see, the effort required to build a merged data set with all the custom predictors of interests is extremely big. Every new dataset we want to merge require dealing with cryptic labels and loads of missing data, knowledge of the information we are merging for interpretation and in all cases some careful pre-processing and merging. Given the diversity, there's no easy way to create generic functions or to generalize the processing a lot. On top of that we have to monitor after every merge for potential additional rows. Given the big effort required in obtaining a merged dataset, and that the scope of this project is not to perfom and instrumentalize such action, we have decided to used an already merged dataset provided by researchers from the University of California, San Diego. However we consider the knowledge we have obtained during this process very valuable for further steps.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ADNI_df = pd.read_csv(&#39;data/ADNIMERGE.csv&#39;)</span>
@@ -4509,7 +4509,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
@@ -5139,7 +5139,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this section we are going to process the ADNI merged dataset in order to be able to fit some models and start making predictions. Our goal is to predict if someone is going to develop Alzheimer within a particular time frame, this is to predict the diagnosis. Notice that this data is nature a time series since we have a timeline in which different doctor visits and tests occur. Notice also that not all the patients participate in all tests so one challenge will be the amount of missing values. We have decided to start by simplifying the problem to the following scenario: we will take all the information available at baseline in the ADNI1 phase and we will attempt to predict the diagnosis at a particular point in time starting by 12 months.</p>
-<p>Before we start fitting different models we need to make some decisions about the data. The biggest problem we need to face is how to deal with so many missing values. For that we take to actions. The first one is to remove the columns with very little values in the selected time frame. The second one is to do simple mean imputation to repleace missing values. After we are going to scale numeric data by using a MinMax scaler and we are going to perform one hot encoding in our categorical data. For last we are going to do a 80/20 training/test split of the data.</p>
+<p>Before we start fitting different models we need to make some decisions about the data. The biggest problem we need to face is how to deal with so many missing values. For that we take to actions. The first one is to remove the columns with very little values in the selected time frame. The second one is to do simple mean imputation to replace missing values. After we are going to scale numeric data by using a MinMax scaler and we are going to perform one hot encoding in our categorical data. For last we are going to do a 80/20 training/test split of the data.</p>
 
 </div>
 </div>
@@ -5214,7 +5214,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">prepare_data</span><span class="p">(</span><span class="n">ADNI_df</span><span class="p">,</span> <span class="n">to_OHE</span><span class="p">,</span> <span class="n">non_pred</span><span class="p">,</span> <span class="n">sparse</span><span class="p">)</span>
@@ -5232,7 +5232,7 @@ Sum individual scores (range will be 0-30). A cut point of 9 (dependent in 3 or 
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[32]:</div>
+<div class="prompt output_prompt">Out[0]:</div>
 
 
 
