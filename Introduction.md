@@ -1,3 +1,8 @@
+---
+nav_include: 1
+title: Intro
+---
+
 
 #  <img style="float: left; padding-right: 10px; width: 45px" src="https://raw.githubusercontent.com/Harvard-IACS/2018-CS109A/master/content/styles/iacs.png"> CS109/209A Introduction to Data Science Final Project
 ## Alzheimer's Disease Neuroimaging Initiative
