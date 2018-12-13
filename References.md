@@ -1,3 +1,7 @@
+---
+nav_include: 5
+title: References
+---
 
 ## References
 
